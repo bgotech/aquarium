@@ -206,6 +206,19 @@
     .manual b { display:block; font-size: 17px; }
     .manual small { color: var(--muted); font-size: 13px; }
     .manual .dl { margin-left:auto; color: var(--cyan); font-size: 20px; }
+    .langs {
+      position: fixed; top: 14px; right: 16px; z-index: 50; display: flex; gap: 6px;
+      padding: 6px; border-radius: 999px; background: rgba(3,17,28,.7); border: 1px solid var(--line);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .langs button {
+      border: 0; padding: 0; cursor: pointer; background: none; border-radius: 6px; line-height: 0;
+      opacity: .45; transition: opacity .15s, transform .15s; outline-offset: 3px;
+    }
+    .langs button:hover { opacity: .85; }
+    .langs button.on { opacity: 1; transform: scale(1.08); }
+    .langs img { width: 30px; height: 20px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(255,255,255,.2); }
+    .manual.mine { border-color: rgba(79,224,214,.6); background: rgba(79,224,214,.08); }
     footer { padding: 36px 0 50px; color: var(--muted); font-size: 14px; text-align: center; }
 
     @media (max-width: 820px) {
@@ -218,6 +231,13 @@
   </style>
 </head>
 <body>
+
+  <!-- ================= SÉLECTEUR DE LANGUE ================= -->
+  <nav class="langs" aria-label="Langue / Language / Idioma">
+    <button type="button" data-lang="fr" title="Français"><img src="images/drapeau-fr.svg" alt="Français"></button>
+    <button type="button" data-lang="en" title="English"><img src="images/drapeau-en.svg" alt="English"></button>
+    <button type="button" data-lang="es" title="Español"><img src="images/drapeau-es.svg" alt="Español"></button>
+  </nav>
 
   <!-- ================= HERO ================= -->
   <header class="hero">
@@ -233,26 +253,24 @@
 
     <div class="wrap hero-grid">
       <div>
-        <span class="tag">Aquatech · pour Waveshare ESP32-S3 AMOLED 1.8"</span>
-        <h1>Votre <em>aquarium vivant</em> au creux de la main</h1>
-        <p class="lead">Achetez vos poissons, nourrissez-les, décorez le bac et nettoyez les algues. Aquatech suit l'heure réelle : vos poissons grandissent et vieillissent même quand l'écran dort. Installation en un clic depuis le navigateur.</p>
+        <span class="tag" data-i18n="tag">Aquatech · pour Waveshare ESP32-S3 AMOLED 1.8"</span>
+        <h1 data-i18n="h1">Votre <em>aquarium vivant</em> au creux de la main</h1>
+        <p class="lead" data-i18n="lead">Achetez vos poissons, nourrissez-les, décorez le bac et nettoyez les algues. Aquatech suit l'heure réelle : vos poissons grandissent et vieillissent même quand l'écran dort. Installation en un clic depuis le navigateur.</p>
 
         <div class="install-box">
           <esp-web-install-button manifest="manifest.json">
-            <button slot="activate" class="btn">🐠 Installer sur mon écran</button>
-            <span slot="unsupported" class="warn">Votre navigateur ne permet pas l'installation. Ouvrez cette page avec <strong>Chrome</strong> ou <strong>Edge</strong> sur ordinateur.</span>
-            <span slot="not-allowed" class="warn">L'installation nécessite une connexion sécurisée (https).</span>
+            <button slot="activate" class="btn" data-i18n="install">🐠 Installer sur mon écran</button>
+            <span slot="unsupported" class="warn" data-i18n="unsupported">Votre navigateur ne permet pas l'installation. Ouvrez cette page avec <strong>Chrome</strong> ou <strong>Edge</strong> sur ordinateur.</span>
+            <span slot="not-allowed" class="warn" data-i18n="https">L'installation nécessite une connexion sécurisée (https).</span>
           </esp-web-install-button>
-          <a class="btn-ghost" href="#manuels">📖 Mode d'emploi</a>
+          <a class="btn-ghost" href="#manuels" data-i18n="guideBtn">📖 Mode d'emploi</a>
         </div>
-        <p class="note">Gratuit · Chrome ou Edge sur ordinateur · Câble USB-C requis</p>
+        <p class="note" data-i18n="note">Gratuit · Chrome ou Edge sur ordinateur · Câble USB-C requis</p>
       </div>
 
       <div class="device">
         <div class="bezel">
-          <div class="screen">
-            <img src="images/aquarium.png" alt="L'aquarium Aquatech sur l'écran AMOLED">
-          </div>
+          <div class="screen"><img src="images/aquarium.png" alt="Aquatech"></div>
         </div>
       </div>
     </div>
@@ -263,24 +281,24 @@
     <!-- ================= CAPTURES ================= -->
     <section id="captures">
       <div class="wrap">
-        <h2>En images</h2>
-        <p class="sub">Des sprites en pixel art aux couleurs éclatantes, sur les noirs parfaits de la dalle AMOLED.</p>
+        <h2 data-i18n="shotsH">En images</h2>
+        <p class="sub" data-i18n="shotsSub">Des sprites en pixel art aux couleurs éclatantes, sur les noirs parfaits de la dalle AMOLED.</p>
         <div class="gallery">
           <figure class="shot">
-            <div class="frame"><img src="images/aquarium.png" alt="L'aquarium" loading="lazy"></div>
-            <figcaption><strong>L'aquarium</strong>Touchez le haut pour nourrir, glissez le doigt pour effacer les algues.</figcaption>
+            <div class="frame"><img src="images/aquarium.png" alt="" loading="lazy"></div>
+            <figcaption data-i18n="cap1"><strong>L'aquarium</strong>Touchez le haut pour nourrir, glissez le doigt pour effacer les algues.</figcaption>
           </figure>
           <figure class="shot">
-            <div class="frame"><img src="images/boutique.png" alt="La boutique" loading="lazy"></div>
-            <figcaption><strong>La boutique</strong>10 espèces de poissons et des décors à placer dans le bac.</figcaption>
+            <div class="frame"><img src="images/boutique.png" alt="" loading="lazy"></div>
+            <figcaption data-i18n="cap2"><strong>La boutique</strong>10 espèces de poissons et des décors à placer dans le bac.</figcaption>
           </figure>
           <figure class="shot">
-            <div class="frame"><img src="images/fiche.png" alt="La fiche d'un poisson" loading="lazy"></div>
-            <figcaption><strong>La fiche d'un poisson</strong>Âge, faim et valeur de revente en un coup d'œil.</figcaption>
+            <div class="frame"><img data-img="fiche" src="images/fiche.png" alt="" loading="lazy"></div>
+            <figcaption data-i18n="cap3"><strong>La fiche d'un poisson</strong>Âge, faim et valeur de revente en un coup d'œil.</figcaption>
           </figure>
           <figure class="shot">
-            <div class="frame"><img src="images/menu.png" alt="Le menu" loading="lazy"></div>
-            <figcaption><strong>Le menu</strong>Son, langue, luminosité, batterie et sauvegarde.</figcaption>
+            <div class="frame"><img data-img="menu" src="images/menu.png" alt="" loading="lazy"></div>
+            <figcaption data-i18n="cap4"><strong>Le menu</strong>Son, langue, luminosité, batterie et sauvegarde.</figcaption>
           </figure>
         </div>
       </div>
@@ -289,18 +307,18 @@
     <!-- ================= FONCTIONS ================= -->
     <section id="fonctions" style="padding-top:0">
       <div class="wrap">
-        <h2>Un vrai petit monde à gérer</h2>
-        <p class="sub">Un jeu tranquille qui vit à son rythme, au rythme de l'horloge réelle.</p>
+        <h2 data-i18n="featH">Un vrai petit monde à gérer</h2>
+        <p class="sub" data-i18n="featSub">Un jeu tranquille qui vit à son rythme, au rythme de l'horloge réelle.</p>
         <div class="features">
-          <div class="card"><div class="ico">🐠</div><h3>10 espèces</h3><p>Du néon à l'oscar, chaque poisson a son prix, sa vitesse et sa durée de vie. Les jeunes grandissent avec le temps.</p></div>
-          <div class="card"><div class="ico">🍤</div><h3>Nourrissez-les</h3><p>Touchez le haut de l'écran pour lâcher de la nourriture. Un poisson oublié trop longtemps finit en squelette…</p></div>
-          <div class="card"><div class="ico">🧽</div><h3>Algues et éponge</h3><p>Les algues envahissent les vitres : effacez-les du doigt, ou adoptez un Black molly ou un Blue tang qui les broutent.</p></div>
-          <div class="card"><div class="ico">💶</div><h3>Une petite économie</h3><p>Départ à 10 €, une rente quotidienne, des décors à acheter et des poissons à revendre.</p></div>
-          <div class="card"><div class="ico">🪸</div><h3>Décorez le bac</h3><p>Coraux, coffre, plantes, rochers… à placer au fond ou au premier plan.</p></div>
-          <div class="card"><div class="ico">🌍</div><h3>3 langues</h3><p>Français, anglais et espagnol, d'une touche sur le drapeau du menu. Son et luminosité réglables.</p></div>
+          <div class="card"><div class="ico">🐠</div><h3 data-i18n="f1h">10 espèces</h3><p data-i18n="f1p">Du néon à l'oscar, chaque poisson a son prix, sa vitesse et sa durée de vie. Les jeunes grandissent avec le temps.</p></div>
+          <div class="card"><div class="ico">🍤</div><h3 data-i18n="f2h">Nourrissez-les</h3><p data-i18n="f2p">Touchez le haut de l'écran pour lâcher de la nourriture. Un poisson oublié trop longtemps finit en squelette…</p></div>
+          <div class="card"><div class="ico">🧽</div><h3 data-i18n="f3h">Algues et éponge</h3><p data-i18n="f3p">Les algues envahissent les vitres : effacez-les du doigt, ou adoptez un Black molly ou un Blue tang qui les broutent.</p></div>
+          <div class="card"><div class="ico">💶</div><h3 data-i18n="f4h">Une petite économie</h3><p data-i18n="f4p">Départ à 10 €, une rente quotidienne, des décors à acheter et des poissons à revendre.</p></div>
+          <div class="card"><div class="ico">🪸</div><h3 data-i18n="f5h">Décorez le bac</h3><p data-i18n="f5p">Coraux, coffre, plantes, rochers… à placer au fond ou au premier plan.</p></div>
+          <div class="card"><div class="ico">🌍</div><h3 data-i18n="f6h">3 langues</h3><p data-i18n="f6p">Français, anglais et espagnol, d'une touche sur le drapeau du menu. Son et luminosité réglables.</p></div>
         </div>
         <div class="species">
-          <span>Néon</span><span>Guppy</span><span>Black molly</span><span>Clown</span><span>Corydoras</span><span>Loach</span><span>Betta</span><span>Blue tang</span><span>Oscar</span><span>Discus</span>
+          <span>Neon</span><span>Guppy</span><span>Black molly</span><span>Clown</span><span>Corydoras</span><span>Loach</span><span>Betta</span><span>Blue tang</span><span>Oscar</span><span>Discus</span>
         </div>
       </div>
     </section>
@@ -308,29 +326,29 @@
     <!-- ================= MATÉRIEL ================= -->
     <section id="materiel" style="padding-top:0">
       <div class="wrap">
-        <h2>L'appareil requis</h2>
-        <p class="sub">L'application est conçue spécifiquement pour la carte Waveshare <strong>ESP32-S3-Touch-AMOLED-1.8</strong>.</p>
+        <h2 data-i18n="hwH">L'appareil requis</h2>
+        <p class="sub" data-i18n="hwSub">Aquatech est conçu spécifiquement pour la carte Waveshare <strong>ESP32-S3-Touch-AMOLED-1.8</strong>.</p>
         <div class="hw">
           <div class="device hw-screen">
             <div class="bezel" style="width:min(260px,64vw)">
-              <div class="screen"><img src="images/menu.png" alt="Le menu d'Aquatech sur l'écran" loading="lazy"></div>
+              <div class="screen"><img data-img="menu" src="images/menu.png" alt="" loading="lazy"></div>
             </div>
           </div>
           <div>
             <table class="specs">
-              <tr><th>Modèle</th><td>Waveshare ESP32-S3-Touch-AMOLED-1.8</td></tr>
-              <tr><th>Processeur</th><td>ESP32-S3R8, double cœur Xtensa LX7 à 240 MHz, Wi-Fi et Bluetooth LE</td></tr>
-              <tr><th>Mémoire</th><td>16 Mo de flash · 8 Mo de PSRAM</td></tr>
-              <tr><th>Écran</th><td>AMOLED 1,8" tactile capacitif, 368 × 448 pixels, 16,7 millions de couleurs</td></tr>
-              <tr><th>Capteurs</th><td>Accéléromètre et gyroscope 6 axes, horloge temps réel (RTC)</td></tr>
-              <tr><th>Audio</th><td>Microphone et haut-parleur intégrés</td></tr>
-              <tr><th>Alimentation</th><td>USB-C · batterie LiPo 3,7 V optionnelle (connecteur MX1.25, charge intégrée)</td></tr>
-              <tr><th>Prix indicatif</th><td>Environ 30 € (avec ou sans batterie)</td></tr>
+              <tr><th data-i18n="sModel">Modèle</th><td>Waveshare ESP32-S3-Touch-AMOLED-1.8</td></tr>
+              <tr><th data-i18n="sCpu">Processeur</th><td data-i18n="vCpu">ESP32-S3R8, double cœur Xtensa LX7 à 240 MHz, Wi-Fi et Bluetooth LE</td></tr>
+              <tr><th data-i18n="sMem">Mémoire</th><td data-i18n="vMem">16 Mo de flash · 8 Mo de PSRAM</td></tr>
+              <tr><th data-i18n="sScreen">Écran</th><td data-i18n="vScreen">AMOLED 1,8" tactile capacitif, 368 × 448 pixels, 16,7 millions de couleurs</td></tr>
+              <tr><th data-i18n="sSens">Capteurs</th><td data-i18n="vSens">Accéléromètre et gyroscope 6 axes, horloge temps réel (RTC)</td></tr>
+              <tr><th data-i18n="sAudio">Audio</th><td data-i18n="vAudio">Microphone et haut-parleur intégrés</td></tr>
+              <tr><th data-i18n="sPower">Alimentation</th><td data-i18n="vPower">USB-C · batterie LiPo 3,7 V optionnelle (connecteur MX1.25, charge intégrée)</td></tr>
+              <tr><th data-i18n="sPrice">Prix indicatif</th><td data-i18n="vPrice">Environ 30 € (avec ou sans batterie)</td></tr>
             </table>
-            <div class="callout">
+            <div class="callout" data-i18n="callout">
               ⚠️ Waveshare vend plusieurs écrans très proches (1,43", 1,75", 2,06"…, ainsi qu'une version <em>ESP32-C6</em> de ce 1,8"). <strong>Seul le modèle ESP32-S3-Touch-AMOLED-1.8 est compatible.</strong>
             </div>
-            <p class="note">Il vous faut aussi un <strong>câble USB-C qui transmet les données</strong> (certains câbles ne font que la charge) et un ordinateur avec Chrome ou Edge.</p>
+            <p class="note" data-i18n="hwNote">Il vous faut aussi un <strong>câble USB-C qui transmet les données</strong> (certains câbles ne font que la charge) et un ordinateur avec Chrome ou Edge.</p>
           </div>
         </div>
       </div>
@@ -339,18 +357,18 @@
     <!-- ================= MANUELS ================= -->
     <section id="manuels" style="padding-top:0">
       <div class="wrap">
-        <h2>Mode d'emploi</h2>
-        <p class="sub">Toutes les commandes et les règles du jeu sur une page A4, à lire à l'écran ou à imprimer.</p>
+        <h2 data-i18n="manH">Mode d'emploi</h2>
+        <p class="sub" data-i18n="manSub">Toutes les commandes et les règles du jeu sur une page A4, à lire à l'écran ou à imprimer.</p>
         <div class="manuals">
-          <a class="manual" href="manuels/Aquatech_mode_d_emploi.pdf" target="_blank" rel="noopener">
+          <a class="manual" data-manual="fr" href="manuels/Aquatech_mode_d_emploi.pdf" target="_blank" rel="noopener" hreflang="fr">
             <img src="images/drapeau-fr.svg" alt="">
             <span><b>Français</b><small>Mode d'emploi · PDF</small></span><span class="dl">↓</span>
           </a>
-          <a class="manual" href="manuels/Aquatech_user_guide.pdf" target="_blank" rel="noopener" hreflang="en">
+          <a class="manual" data-manual="en" href="manuels/Aquatech_user_guide.pdf" target="_blank" rel="noopener" hreflang="en">
             <img src="images/drapeau-en.svg" alt="">
             <span><b>English</b><small>User guide · PDF</small></span><span class="dl">↓</span>
           </a>
-          <a class="manual" href="manuels/Aquatech_manual_de_usuario.pdf" target="_blank" rel="noopener" hreflang="es">
+          <a class="manual" data-manual="es" href="manuels/Aquatech_manual_de_usuario.pdf" target="_blank" rel="noopener" hreflang="es">
             <img src="images/drapeau-es.svg" alt="">
             <span><b>Español</b><small>Manual de usuario · PDF</small></span><span class="dl">↓</span>
           </a>
@@ -361,12 +379,12 @@
     <!-- ================= INSTALLATION ================= -->
     <section id="installation" style="padding-top:0">
       <div class="wrap">
-        <h2>Installation en 3 étapes</h2>
-        <p class="sub">Comptez environ une minute.</p>
+        <h2 data-i18n="instH">Installation en 3 étapes</h2>
+        <p class="sub" data-i18n="instSub">Comptez environ une minute.</p>
         <div class="steps">
-          <div class="card step"><h3>Branchez</h3><p>Reliez l'écran à votre ordinateur avec un câble USB-C.</p></div>
-          <div class="card step"><h3>Cliquez</h3><p>Appuyez sur « Installer sur mon écran », puis choisissez le port de la carte dans la liste.</p></div>
-          <div class="card step"><h3>Patientez</h3><p>Laissez la carte branchée pendant l'installation. Aquatech démarre tout seul à la fin.</p></div>
+          <div class="card step"><h3 data-i18n="st1h">Branchez</h3><p data-i18n="st1p">Reliez l'écran à votre ordinateur avec un câble USB-C.</p></div>
+          <div class="card step"><h3 data-i18n="st2h">Cliquez</h3><p data-i18n="st2p">Appuyez sur « Installer sur mon écran », puis choisissez le port de la carte dans la liste.</p></div>
+          <div class="card step"><h3 data-i18n="st3h">Patientez</h3><p data-i18n="st3p">Laissez la carte branchée pendant l'installation. Aquatech démarre tout seul à la fin.</p></div>
         </div>
       </div>
     </section>
@@ -374,24 +392,16 @@
     <!-- ================= DÉPANNAGE ================= -->
     <section id="aide" style="padding-top:0">
       <div class="wrap">
-        <h2>Un souci ?</h2>
-        <p class="sub">Les solutions aux problèmes les plus courants.</p>
-        <details>
-          <summary>La carte n'apparaît pas dans la liste</summary>
-          <p>Essayez un autre câble : beaucoup de câbles USB-C ne transmettent pas les données. Sinon, débranchez la carte, maintenez le bouton <strong>BOOT</strong> enfoncé, rebranchez-la, puis relâchez le bouton et réessayez.</p>
-        </details>
-        <details>
-          <summary>Le bouton d'installation n'apparaît pas</summary>
-          <p>L'installation fonctionne uniquement avec Chrome, Edge ou Opera sur ordinateur. Firefox et Safari ne sont pas compatibles.</p>
-        </details>
-        <details>
-          <summary>L'écran reste noir après l'installation</summary>
-          <p>Débranchez puis rebranchez la carte. Si le problème persiste, relancez l'installation en acceptant l'effacement complet de la mémoire.</p>
-        </details>
-        <details>
-          <summary>Comment mettre à jour l'application ?</summary>
-          <p>Revenez simplement sur cette page et cliquez à nouveau sur « Installer » : la dernière version sera installée.</p>
-        </details>
+        <h2 data-i18n="helpH">Un souci ?</h2>
+        <p class="sub" data-i18n="helpSub">Les solutions aux problèmes les plus courants.</p>
+        <details><summary data-i18n="q1">La carte n'apparaît pas dans la liste</summary>
+          <p data-i18n="a1">Essayez un autre câble : beaucoup de câbles USB-C ne transmettent pas les données. Sinon, débranchez la carte, maintenez le bouton <strong>BOOT</strong> enfoncé, rebranchez-la, puis relâchez le bouton et réessayez.</p></details>
+        <details><summary data-i18n="q2">Le bouton d'installation n'apparaît pas</summary>
+          <p data-i18n="a2">L'installation fonctionne uniquement avec Chrome, Edge ou Opera sur ordinateur. Firefox et Safari ne sont pas compatibles.</p></details>
+        <details><summary data-i18n="q3">L'écran reste noir après l'installation</summary>
+          <p data-i18n="a3">Débranchez puis rebranchez la carte. Si le problème persiste, relancez l'installation en acceptant l'effacement complet de la mémoire.</p></details>
+        <details><summary data-i18n="q4">Comment mettre à jour l'application ?</summary>
+          <p data-i18n="a4">Revenez simplement sur cette page et cliquez à nouveau sur « Installer » : la dernière version sera installée.</p></details>
       </div>
     </section>
 
@@ -399,12 +409,12 @@
     <section style="padding-top:0">
       <div class="wrap">
         <div class="cta">
-          <h2>Prêt à plonger ?</h2>
-          <p class="sub" style="margin:0 auto 26px">Branchez votre écran et lancez l'installation.</p>
+          <h2 data-i18n="ctaH">Prêt à plonger ?</h2>
+          <p class="sub" style="margin:0 auto 26px" data-i18n="ctaSub">Branchez votre écran et lancez l'installation.</p>
           <esp-web-install-button manifest="manifest.json">
-            <button slot="activate" class="btn">🐠 Installer maintenant</button>
-            <span slot="unsupported" class="warn">Ouvrez cette page avec Chrome ou Edge sur ordinateur.</span>
-            <span slot="not-allowed" class="warn">Connexion sécurisée (https) requise.</span>
+            <button slot="activate" class="btn" data-i18n="install2">🐠 Installer maintenant</button>
+            <span slot="unsupported" class="warn" data-i18n="unsupported2">Ouvrez cette page avec Chrome ou Edge sur ordinateur.</span>
+            <span slot="not-allowed" class="warn" data-i18n="https2">Connexion sécurisée (https) requise.</span>
           </esp-web-install-button>
         </div>
       </div>
@@ -413,10 +423,159 @@
 
   <footer>
     <div class="wrap">
-      Aquatech · <a href="https://github.com/bgotech/aquarium">Code et versions sur GitHub</a><br>
-      Installation propulsée par <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a>
+      Aquatech · <a href="https://github.com/bgotech/aquarium" data-i18n="ghLink">Code et versions sur GitHub</a><br>
+      <span data-i18n="powered">Installation propulsée par</span> <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a>
     </div>
   </footer>
+
+  <script>
+  // ===== Traductions (le français est écrit directement dans la page) =====
+  const T = {
+    en: {
+      title: "Aquatech · AMOLED aquarium",
+      tag: 'Aquatech · for Waveshare ESP32-S3 AMOLED 1.8"',
+      h1: "Your <em>living aquarium</em> in the palm of your hand",
+      lead: "Buy fish, feed them, decorate the tank and clean off the algae. Aquatech runs on real time: your fish grow and age even while the screen sleeps. One-click install from your browser.",
+      install: "🐠 Install on my screen",
+      unsupported: "Your browser can't install firmware. Open this page in <strong>Chrome</strong> or <strong>Edge</strong> on a computer.",
+      https: "Installation requires a secure (https) connection.",
+      guideBtn: "📖 User guide",
+      note: "Free · Chrome or Edge on a computer · USB-C cable required",
+      shotsH: "Screenshots",
+      shotsSub: "Vivid pixel-art sprites on the perfect blacks of the AMOLED panel.",
+      cap1: "<strong>The aquarium</strong>Tap the top to feed, swipe a finger to wipe off algae.",
+      cap2: "<strong>The shop</strong>10 fish species and decorations to place in the tank.",
+      cap3: "<strong>A fish's card</strong>Age, hunger and resale value at a glance.",
+      cap4: "<strong>The menu</strong>Sound, language, brightness, battery and save.",
+      featH: "A little world to look after",
+      featSub: "A relaxing game that lives at its own pace, following the real clock.",
+      f1h: "10 species", f1p: "From the neon to the oscar, each fish has its own price, speed and lifespan. Young fish grow over time.",
+      f2h: "Feed them", f2p: "Tap the top of the screen to drop food. A fish left hungry for too long ends up as a skeleton…",
+      f3h: "Algae and sponge", f3p: "Algae spreads over the glass: wipe it off with a finger, or adopt a Black molly or a Blue tang to graze on it.",
+      f4h: "A small economy", f4p: "Start with €10, earn a daily income, buy decorations and sell fish.",
+      f5h: "Decorate the tank", f5p: "Corals, a chest, plants, rocks… placed in the background or the foreground.",
+      f6h: "3 languages", f6p: "French, English and Spanish, with one tap on the flag in the menu. Adjustable sound and brightness.",
+      hwH: "Required hardware",
+      hwSub: "Aquatech is designed specifically for the Waveshare <strong>ESP32-S3-Touch-AMOLED-1.8</strong> board.",
+      sModel: "Model", sCpu: "Processor", sMem: "Memory", sScreen: "Display", sSens: "Sensors", sAudio: "Audio", sPower: "Power", sPrice: "Approx. price",
+      vCpu: "ESP32-S3R8, dual-core Xtensa LX7 at 240 MHz, Wi-Fi and Bluetooth LE",
+      vMem: "16 MB flash · 8 MB PSRAM",
+      vScreen: '1.8" capacitive touch AMOLED, 368 × 448 pixels, 16.7 million colours',
+      vSens: "6-axis accelerometer and gyroscope, real-time clock (RTC)",
+      vAudio: "Built-in microphone and speaker",
+      vPower: "USB-C · optional 3.7 V LiPo battery (MX1.25 connector, on-board charging)",
+      vPrice: "About $30 / €30 (with or without battery)",
+      callout: '⚠️ Waveshare sells several very similar screens (1.43", 1.75", 2.06"…, plus an <em>ESP32-C6</em> version of this 1.8"). <strong>Only the ESP32-S3-Touch-AMOLED-1.8 is compatible.</strong>',
+      hwNote: "You also need a <strong>USB-C cable that carries data</strong> (some cables only charge) and a computer with Chrome or Edge.",
+      manH: "User guide",
+      manSub: "All the controls and game rules on a single A4 page, to read on screen or print.",
+      instH: "Install in 3 steps", instSub: "It takes about a minute.",
+      st1h: "Plug in", st1p: "Connect the screen to your computer with a USB-C cable.",
+      st2h: "Click", st2p: "Press “Install on my screen”, then pick the board's port from the list.",
+      st3h: "Wait", st3p: "Keep the board connected during installation. Aquatech starts by itself when it's done.",
+      helpH: "Having trouble?", helpSub: "Solutions to the most common problems.",
+      q1: "The board doesn't show up in the list",
+      a1: "Try another cable: many USB-C cables don't carry data. Otherwise, unplug the board, hold the <strong>BOOT</strong> button, plug it back in, release the button and try again.",
+      q2: "The install button doesn't appear",
+      a2: "Installation only works with Chrome, Edge or Opera on a computer. Firefox and Safari are not supported.",
+      q3: "The screen stays black after installation",
+      a3: "Unplug and replug the board. If the problem persists, run the installation again and accept the full erase.",
+      q4: "How do I update the app?",
+      a4: "Just come back to this page and click “Install” again: the latest version will be installed.",
+      ctaH: "Ready to dive in?", ctaSub: "Plug in your screen and start the installation.",
+      install2: "🐠 Install now",
+      unsupported2: "Open this page in Chrome or Edge on a computer.",
+      https2: "Secure (https) connection required.",
+      ghLink: "Code and releases on GitHub", powered: "Installation powered by"
+    },
+    es: {
+      title: "Aquatech · acuario AMOLED",
+      tag: 'Aquatech · para Waveshare ESP32-S3 AMOLED 1.8"',
+      h1: "Tu <em>acuario vivo</em> en la palma de la mano",
+      lead: "Compra peces, aliméntalos, decora el acuario y limpia las algas. Aquatech sigue la hora real: tus peces crecen y envejecen incluso cuando la pantalla duerme. Instalación con un clic desde el navegador.",
+      install: "🐠 Instalar en mi pantalla",
+      unsupported: "Tu navegador no permite la instalación. Abre esta página con <strong>Chrome</strong> o <strong>Edge</strong> en un ordenador.",
+      https: "La instalación requiere una conexión segura (https).",
+      guideBtn: "📖 Manual de usuario",
+      note: "Gratis · Chrome o Edge en ordenador · Cable USB-C necesario",
+      shotsH: "En imágenes",
+      shotsSub: "Sprites de pixel art con colores vivos sobre los negros perfectos de la pantalla AMOLED.",
+      cap1: "<strong>El acuario</strong>Toca la parte superior para alimentar, desliza el dedo para quitar las algas.",
+      cap2: "<strong>La tienda</strong>10 especies de peces y decorados para colocar en el acuario.",
+      cap3: "<strong>La ficha de un pez</strong>Edad, hambre y valor de reventa de un vistazo.",
+      cap4: "<strong>El menú</strong>Sonido, idioma, brillo, batería y guardado.",
+      featH: "Un pequeño mundo que cuidar",
+      featSub: "Un juego tranquilo que vive a su ritmo, siguiendo el reloj real.",
+      f1h: "10 especies", f1p: "Del neón al óscar, cada pez tiene su precio, su velocidad y su esperanza de vida. Los jóvenes crecen con el tiempo.",
+      f2h: "Aliméntalos", f2p: "Toca la parte superior de la pantalla para soltar comida. Un pez olvidado demasiado tiempo acaba como esqueleto…",
+      f3h: "Algas y esponja", f3p: "Las algas invaden el cristal: quítalas con el dedo o adopta un Black molly o un Blue tang que se las comen.",
+      f4h: "Una pequeña economía", f4p: "Empiezas con 10 €, recibes una renta diaria, compras decorados y vendes peces.",
+      f5h: "Decora el acuario", f5p: "Corales, cofre, plantas, rocas… al fondo o en primer plano.",
+      f6h: "3 idiomas", f6p: "Francés, inglés y español, con un toque en la bandera del menú. Sonido y brillo ajustables.",
+      hwH: "El aparato necesario",
+      hwSub: "Aquatech está diseñado específicamente para la placa Waveshare <strong>ESP32-S3-Touch-AMOLED-1.8</strong>.",
+      sModel: "Modelo", sCpu: "Procesador", sMem: "Memoria", sScreen: "Pantalla", sSens: "Sensores", sAudio: "Audio", sPower: "Alimentación", sPrice: "Precio aproximado",
+      vCpu: "ESP32-S3R8, doble núcleo Xtensa LX7 a 240 MHz, Wi-Fi y Bluetooth LE",
+      vMem: "16 MB de flash · 8 MB de PSRAM",
+      vScreen: 'AMOLED táctil capacitiva de 1,8", 368 × 448 píxeles, 16,7 millones de colores',
+      vSens: "Acelerómetro y giroscopio de 6 ejes, reloj de tiempo real (RTC)",
+      vAudio: "Micrófono y altavoz integrados",
+      vPower: "USB-C · batería LiPo de 3,7 V opcional (conector MX1.25, carga integrada)",
+      vPrice: "Unos 30 € (con o sin batería)",
+      callout: '⚠️ Waveshare vende varias pantallas muy parecidas (1,43", 1,75", 2,06"…, y una versión <em>ESP32-C6</em> de esta de 1,8"). <strong>Solo el modelo ESP32-S3-Touch-AMOLED-1.8 es compatible.</strong>',
+      hwNote: "También necesitas un <strong>cable USB-C que transmita datos</strong> (algunos solo cargan) y un ordenador con Chrome o Edge.",
+      manH: "Manual de usuario",
+      manSub: "Todos los controles y las reglas del juego en una página A4, para leer en pantalla o imprimir.",
+      instH: "Instalación en 3 pasos", instSub: "Tarda alrededor de un minuto.",
+      st1h: "Conecta", st1p: "Conecta la pantalla al ordenador con un cable USB-C.",
+      st2h: "Haz clic", st2p: "Pulsa «Instalar en mi pantalla» y elige el puerto de la placa en la lista.",
+      st3h: "Espera", st3p: "Deja la placa conectada durante la instalación. Aquatech se inicia solo al terminar.",
+      helpH: "¿Algún problema?", helpSub: "Soluciones a los problemas más habituales.",
+      q1: "La placa no aparece en la lista",
+      a1: "Prueba otro cable: muchos cables USB-C no transmiten datos. Si no, desconecta la placa, mantén pulsado el botón <strong>BOOT</strong>, vuelve a conectarla, suelta el botón e inténtalo de nuevo.",
+      q2: "El botón de instalación no aparece",
+      a2: "La instalación solo funciona con Chrome, Edge u Opera en un ordenador. Firefox y Safari no son compatibles.",
+      q3: "La pantalla se queda negra tras la instalación",
+      a3: "Desconecta y vuelve a conectar la placa. Si el problema persiste, repite la instalación aceptando el borrado completo.",
+      q4: "¿Cómo actualizo la aplicación?",
+      a4: "Vuelve a esta página y pulsa de nuevo «Instalar»: se instalará la última versión.",
+      ctaH: "¿Listo para sumergirte?", ctaSub: "Conecta tu pantalla y lanza la instalación.",
+      install2: "🐠 Instalar ahora",
+      unsupported2: "Abre esta página con Chrome o Edge en un ordenador.",
+      https2: "Se necesita una conexión segura (https).",
+      ghLink: "Código y versiones en GitHub", powered: "Instalación impulsada por"
+    }
+  };
+
+  // Le français est lu dans la page elle-même au chargement
+  T.fr = { title: document.title };
+  document.querySelectorAll('[data-i18n]').forEach(el => { T.fr[el.dataset.i18n] = el.innerHTML; });
+
+  function setLang(lang) {
+    if (!T[lang]) lang = 'fr';
+    const d = T[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const v = d[el.dataset.i18n];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    // Captures du menu et de la fiche dans la bonne langue
+    const suffix = lang === 'fr' ? '' : '-' + lang;
+    document.querySelectorAll('img[data-img]').forEach(img => { img.src = 'images/' + img.dataset.img + suffix + '.png'; });
+    document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+    document.querySelectorAll('.manual').forEach(a => a.classList.toggle('mine', a.dataset.manual === lang));
+    try { localStorage.setItem('aquatech-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+  // Langue de départ : ?lang=xx, puis le dernier choix, puis la langue du navigateur
+  let start = new URLSearchParams(location.search).get('lang');
+  if (!start) { try { start = localStorage.getItem('aquatech-lang'); } catch (e) {} }
+  if (!start) start = (navigator.language || 'fr').slice(0, 2).toLowerCase();
+  setLang(['fr', 'en', 'es'].includes(start) ? start : 'en');
+  </script>
 
 </body>
 </html>

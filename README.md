@@ -1,112 +1,118 @@
+<p align="center">
+  <a href="README.md"><img src="images/drapeau-en.svg" width="36" alt="English"></a>&nbsp;<a href="README.md"><b>English</b></a>&nbsp;&nbsp;
+  <a href="README.fr.md"><img src="images/drapeau-fr.svg" width="36" alt="Français"></a>&nbsp;<a href="README.fr.md">Français</a>&nbsp;&nbsp;
+  <a href="README.es.md"><img src="images/drapeau-es.svg" width="36" alt="Español"></a>&nbsp;<a href="README.es.md">Español</a>&nbsp;&nbsp;
+</p>
+
 <div align="center">
 
 # 🐠 Aquatech
 
-**Un aquarium virtuel pour l'écran Waveshare ESP32-S3 AMOLED 1.8"**
+**A virtual aquarium for the Waveshare ESP32-S3 AMOLED 1.8" screen**
 
-Installation en un clic depuis votre navigateur, sans aucun outil de développement.
+One-click install from your browser, no development tools needed.
 
-[![Installer](https://img.shields.io/badge/🐠_Installer_sur_mon_écran-ff7a59?style=for-the-badge)](https://bgotech.github.io/aquarium/)
+[![Install](https://img.shields.io/badge/🐠_Install_on_my_screen-ff7a59?style=for-the-badge)](https://bgotech.github.io/aquarium/?lang=en)
 
-![Plateforme](https://img.shields.io/badge/ESP32--S3-AMOLED_1.8"-0b4a63?style=flat-square)
-![Navigateurs](https://img.shields.io/badge/Chrome_|_Edge-compatible-4fe0d6?style=flat-square)
-![Langues](https://img.shields.io/badge/langues-FR_|_EN_|_ES-ffb347?style=flat-square)
+![Platform](https://img.shields.io/badge/ESP32--S3-AMOLED_1.8"-0b4a63?style=flat-square)
+![Browsers](https://img.shields.io/badge/Chrome_|_Edge-compatible-4fe0d6?style=flat-square)
+![Languages](https://img.shields.io/badge/languages-FR_|_EN_|_ES-ffb347?style=flat-square)
 
 <br>
 
-<img src="images/aquarium.png" alt="L'aquarium Aquatech" width="300">
+<img src="images/aquarium.png" alt="The Aquatech aquarium" width="300">
 
 </div>
 
 ---
 
-## ✨ Présentation
+## ✨ Overview
 
-Aquatech transforme le petit écran AMOLED de Waveshare en aquarium vivant. Achetez vos poissons, nourrissez-les, décorez le bac et nettoyez les algues. Le jeu suit l'heure réelle : vos poissons grandissent et vieillissent même quand l'écran est en veille.
+Aquatech turns Waveshare's little AMOLED screen into a living aquarium. Buy fish, feed them, decorate the tank and clean off the algae. The game runs on real time: your fish grow and age even while the screen is asleep.
 
-### Fonctionnalités
+### Features
 
-- 🐠 **10 espèces** : Néon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar et Discus. Chacune a son prix, sa vitesse et sa durée de vie.
-- 🍤 **Nourrissage** : touchez le haut de l'écran pour lâcher de la nourriture. Un poisson oublié trop longtemps meurt et laisse un squelette.
-- 🧽 **Algues et éponge** : effacez les algues du doigt, ou adoptez un Black molly ou un Blue tang qui les broutent.
-- 💶 **Économie** : départ à 10 €, une rente quotidienne, des décors à acheter et des poissons à revendre.
-- 🪸 **Décors** : coraux, coffre, plantes, rochers… à placer au fond ou au premier plan.
-- 🌍 **3 langues** : français, anglais et espagnol. Son et luminosité réglables, sauvegarde automatique.
+- 🐠 **10 species**: Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar and Discus. Each has its own price, speed and lifespan.
+- 🍤 **Feeding**: tap the top of the screen to drop food. A fish left hungry for too long dies and leaves a skeleton.
+- 🧽 **Algae and sponge**: wipe algae off with a finger, or adopt a Black molly or a Blue tang to graze on it.
+- 💶 **Economy**: start with €10, earn a daily income, buy decorations and sell fish.
+- 🪸 **Decorations**: corals, a chest, plants, rocks… placed in the background or the foreground.
+- 🌍 **3 languages**: French, English and Spanish. Adjustable sound and brightness, automatic saving.
 
-## 📸 Captures d'écran
+## 📸 Screenshots
 
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="images/aquarium.png" width="180"><br><sub><b>L'aquarium</b></sub></td>
-    <td align="center"><img src="images/boutique.png" width="180"><br><sub><b>La boutique</b></sub></td>
-    <td align="center"><img src="images/fiche.png" width="180"><br><sub><b>La fiche d'un poisson</b></sub></td>
-    <td align="center"><img src="images/menu.png" width="180"><br><sub><b>Le menu</b></sub></td>
+    <td align="center"><img src="images/aquarium.png" width="180"><br><sub><b>The aquarium</b></sub></td>
+    <td align="center"><img src="images/boutique.png" width="180"><br><sub><b>The shop</b></sub></td>
+    <td align="center"><img src="images/fiche-en.png" width="180"><br><sub><b>A fish's card</b></sub></td>
+    <td align="center"><img src="images/menu-en.png" width="180"><br><sub><b>The menu</b></sub></td>
   </tr>
 </table>
 </div>
 
-## 📖 Mode d'emploi
+## 📖 User guide
 
 <table>
   <tr>
-    <td align="center"><a href="manuels/Aquatech_mode_d_emploi.pdf"><img src="images/drapeau-fr.svg" width="60"><br><b>Français</b></a></td>
     <td align="center"><a href="manuels/Aquatech_user_guide.pdf"><img src="images/drapeau-en.svg" width="60"><br><b>English</b></a></td>
+    <td align="center"><a href="manuels/Aquatech_mode_d_emploi.pdf"><img src="images/drapeau-fr.svg" width="60"><br><b>Français</b></a></td>
     <td align="center"><a href="manuels/Aquatech_manual_de_usuario.pdf"><img src="images/drapeau-es.svg" width="60"><br><b>Español</b></a></td>
   </tr>
 </table>
 
-## 🔧 Matériel requis
+## 🔧 Required hardware
 
-Aquatech est conçu pour la carte **[Waveshare ESP32-S3-Touch-AMOLED-1.8](https://www.waveshare.com/esp32-s3-touch-amoled-1.8.htm)** (environ 30 €).
+Aquatech is designed for the **[Waveshare ESP32-S3-Touch-AMOLED-1.8](https://www.waveshare.com/esp32-s3-touch-amoled-1.8.htm)** board (about $30).
 
 | | |
 |---|---|
-| **Processeur** | ESP32-S3R8, double cœur LX7 240 MHz, Wi-Fi + Bluetooth LE |
-| **Mémoire** | 16 Mo flash · 8 Mo PSRAM |
-| **Écran** | AMOLED 1,8" tactile, 368 × 448 px, 16,7 M de couleurs |
-| **Capteurs** | IMU 6 axes, horloge RTC |
-| **Audio** | Micro et haut-parleur intégrés |
-| **Alimentation** | USB-C, batterie LiPo 3,7 V optionnelle |
+| **Processor** | ESP32-S3R8, dual-core LX7 240 MHz, Wi-Fi + Bluetooth LE |
+| **Memory** | 16 MB flash · 8 MB PSRAM |
+| **Display** | 1.8" touch AMOLED, 368 × 448 px, 16.7 M colours |
+| **Sensors** | 6-axis IMU, RTC clock |
+| **Audio** | Built-in microphone and speaker |
+| **Power** | USB-C, optional 3.7 V LiPo battery |
 
 > [!WARNING]
-> Waveshare vend plusieurs écrans très proches (1,43", 1,75", 2,06"… et une version **ESP32-C6** du 1,8"). **Seul le modèle ESP32-S3-Touch-AMOLED-1.8 est compatible.**
+> Waveshare sells several very similar screens (1.43", 1.75", 2.06"… and an **ESP32-C6** version of the 1.8"). **Only the ESP32-S3-Touch-AMOLED-1.8 is compatible.**
 
-Il vous faut aussi :
-- un **câble USB-C qui transmet les données** (pas un câble de charge seule) ;
-- un ordinateur avec **Google Chrome** ou **Microsoft Edge**.
+You also need:
+- a **USB-C cable that carries data** (not a charge-only cable);
+- a computer with **Google Chrome** or **Microsoft Edge**.
 
 ## 🚀 Installation
 
-1. Branchez l'écran à votre ordinateur en USB-C.
-2. Ouvrez **[bgotech.github.io/aquarium](https://bgotech.github.io/aquarium/)** dans Chrome ou Edge.
-3. Cliquez sur **« Installer sur mon écran »** et choisissez le port de la carte.
-4. Patientez environ une minute : Aquatech démarre tout seul.
+1. Connect the screen to your computer with USB-C.
+2. Open **[bgotech.github.io/aquarium](https://bgotech.github.io/aquarium/?lang=en)** in Chrome or Edge.
+3. Click **“Install on my screen”** and pick the board's port.
+4. Wait about a minute: Aquatech starts by itself.
 
-Pour **mettre à jour**, revenez simplement sur la page et relancez l'installation.
+To **update**, just come back to the page and run the installation again.
 
-## 🛟 Dépannage
+## 🛟 Troubleshooting
 
 <details>
-<summary><b>La carte n'apparaît pas dans la liste</b></summary>
+<summary><b>The board doesn't show up in the list</b></summary>
 
-Essayez un autre câble. Sinon : débranchez la carte, maintenez le bouton **BOOT**, rebranchez-la, relâchez le bouton et réessayez.
+Try another cable. Otherwise: unplug the board, hold the **BOOT** button, plug it back in, release the button and try again.
 </details>
 
 <details>
-<summary><b>Le bouton d'installation n'apparaît pas</b></summary>
+<summary><b>The install button doesn't appear</b></summary>
 
-Utilisez Chrome, Edge ou Opera sur ordinateur. Firefox et Safari ne gèrent pas l'installation par navigateur (WebSerial).
+Use Chrome, Edge or Opera on a computer. Firefox and Safari don't support browser-based installation (WebSerial).
 </details>
 
 <details>
-<summary><b>L'écran reste noir après l'installation</b></summary>
+<summary><b>The screen stays black after installation</b></summary>
 
-Débranchez et rebranchez la carte. Si besoin, relancez l'installation en acceptant l'effacement complet.
+Unplug and replug the board. If needed, run the installation again and accept the full erase.
 </details>
 
 ---
 
 <div align="center">
-<sub>Installation propulsée par <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a></sub>
+<sub>Installation powered by <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a></sub>
 </div>
