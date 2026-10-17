@@ -32,10 +32,10 @@ Aquatech transforme le petit écran AMOLED de Waveshare en aquarium vivant. Ache
 
 ### Fonctionnalités
 
-- 🐠 **10 espèces** : Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar et Discus. Chacune a son prix, sa vitesse et sa durée de vie.
-- 🍤 **Nourrissage** : touchez le haut de l'écran pour lâcher de la nourriture. Un poisson oublié trop longtemps meurt et laisse un squelette.
-- 🧽 **Algues et éponge** : effacez les algues du doigt, ou adoptez un Black molly ou un Blue tang qui les broutent.
-- 💶 **Économie** : départ à 10 €, une rente quotidienne, des décors à acheter et des poissons à revendre.
+- 🐠 **16 espèces** : 10 poissons (Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar et Discus), plus le Poisson globe qui se gonfle quand on l'effraie, la Méduse qui pulse, l'Hippocampe qui reste près des décors, l'Écrevisse et l'Axolotl qui marchent sur le sable, et l'Escargot qui grimpe aux vitres. Chacun a son prix, son comportement et sa durée de vie.
+- 🍤 **Nourrissage** : touchez le haut de l'écran pour lâcher de la nourriture. Un animal oublié trop longtemps meurt et laisse un squelette.
+- 🧽 **Algues et éponge** : effacez les algues du doigt, ou adoptez un Black molly, un Blue tang ou un Escargot qui les broutent.
+- 💶 **Économie** : départ à 10 €, une rente quotidienne, des décors à acheter et des animaux à revendre.
 - 🪸 **Décors** : coraux, coffre, plantes, rochers… à placer au fond ou au premier plan.
 - 🌍 **3 langues** : français, anglais et espagnol. Son et luminosité réglables, sauvegarde automatique.
 

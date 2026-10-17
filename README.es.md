@@ -32,10 +32,10 @@ Aquatech convierte la pequeña pantalla AMOLED de Waveshare en un acuario vivo. 
 
 ### Funciones
 
-- 🐠 **10 especies**: Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar y Discus. Cada una tiene su precio, su velocidad y su esperanza de vida.
-- 🍤 **Alimentación**: toca la parte superior de la pantalla para soltar comida. Un pez olvidado demasiado tiempo muere y deja un esqueleto.
-- 🧽 **Algas y esponja**: quita las algas con el dedo o adopta un Black molly o un Blue tang que se las comen.
-- 💶 **Economía**: empiezas con 10 €, recibes una renta diaria, compras decorados y vendes peces.
+- 🐠 **16 especies**: 10 peces (Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar y Discus), más el Pez globo que se infla cuando se asusta, la Medusa que late, el Hipocampo que se queda cerca de los adornos, el Cangrejo y el Axolotl que caminan sobre la arena, y el Caracol que trepa por el cristal. Cada uno tiene su precio, su comportamiento y su esperanza de vida.
+- 🍤 **Alimentación**: toca la parte superior de la pantalla para soltar comida. Un animal olvidado demasiado tiempo muere y deja un esqueleto.
+- 🧽 **Algas y esponja**: quita las algas con el dedo o adopta un Black molly, un Blue tang o un Caracol que se las comen.
+- 💶 **Economía**: empiezas con 10 €, recibes una renta diaria, compras decorados y vendes animales.
 - 🪸 **Decorados**: corales, cofre, plantas, rocas… al fondo o en primer plano.
 - 🌍 **3 idiomas**: francés, inglés y español. Sonido y brillo ajustables, guardado automático.
 

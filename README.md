@@ -32,10 +32,10 @@ Aquatech turns Waveshare's little AMOLED screen into a living aquarium. Buy fish
 
 ### Features
 
-- 🐠 **10 species**: Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar and Discus. Each has its own price, speed and lifespan.
-- 🍤 **Feeding**: tap the top of the screen to drop food. A fish left hungry for too long dies and leaves a skeleton.
-- 🧽 **Algae and sponge**: wipe algae off with a finger, or adopt a Black molly or a Blue tang to graze on it.
-- 💶 **Economy**: start with €10, earn a daily income, buy decorations and sell fish.
+- 🐠 **16 species**: 10 fish (Neon, Guppy, Black molly, Clown, Corydoras, Loach, Betta, Blue tang, Oscar and Discus), plus the Pufferfish that inflates when scared, the pulsing Jellyfish, the Seahorse that stays near the decorations, the Crayfish and the Axolotl that walk on the sand, and the Snail that climbs the glass. Each has its own price, behaviour and lifespan.
+- 🍤 **Feeding**: tap the top of the screen to drop food. An animal left hungry for too long dies and leaves a skeleton.
+- 🧽 **Algae and sponge**: wipe algae off with a finger, or adopt a Black molly, a Blue tang or a Snail to graze on it.
+- 💶 **Economy**: start with €10, earn a daily income, buy decorations and sell animals.
 - 🪸 **Decorations**: corals, a chest, plants, rocks… placed in the background or the foreground.
 - 🌍 **3 languages**: French, English and Spanish. Adjustable sound and brightness, automatic saving.
 
